@@ -5,7 +5,7 @@ link() {
 	ln -i -s $(pwd)/$1 $target_dir/$1
 }
 
+brew install getantibody/tap/antibody
+
+link .zsh_plugins
 link .zshrc
-link .tmux
-link .tmux.conf
-link .tmux.conf.local
