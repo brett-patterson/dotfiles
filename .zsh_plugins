@@ -1,8 +1,9 @@
 robbyrussell/oh-my-zsh
 robbyrussell/oh-my-zsh path:plugins/aws
-robbyrussell/oh-my-zsh path:plugins/docker
 robbyrussell/oh-my-zsh path:plugins/git
 robbyrussell/oh-my-zsh path:plugins/kubectl
 
-robbyrussell/oh-my-zsh path:lib
-robbyrussell/oh-my-zsh path:themes/agnoster.zsh-theme
+docker/cli path:contrib/completion/zsh kind:fpath
+bazelbuild/bazel path:scripts/zsh_completion kind:fpath
+
+agnoster/agnoster-zsh-theme path:agnoster.zsh-theme
