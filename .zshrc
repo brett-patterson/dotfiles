@@ -2,7 +2,7 @@ source <(antibody init)
 
 ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
 ZSH_THEME=agnoster
-DEFAULT_USER=brettp
+DEFAULT_USER=$USER
 SHOW_AWS_PROMPT=false
 
 antibody bundle < ~/.zsh_plugins
