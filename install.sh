@@ -1,11 +1,18 @@
 #!/usr/bin/env bash
 
+base_dir=$(cd $(dirname $0) && pwd)
+
 link() {
 	target_dir=${2:-~}
-	ln -i -s $(pwd)/$1 $target_dir/$1
+	ln -i -s $base_dir/$1 $target_dir/$1
 }
 
-brew install getantibody/tap/antibody
+if brew list | grep -q antibody; then
+	brew upgrade antibody
+else
+	brew install getantibody/tap/antibody
+fi
 
 link .zsh_plugins
 link .zshrc
+link bin

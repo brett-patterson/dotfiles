@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+line=$1
+sed -i -e $1d ~/.ssh/known_hosts

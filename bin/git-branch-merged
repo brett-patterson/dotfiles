@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+branch_name=$(git branch --show-current)
+git checkout master
+git pull -p
+git branch -d $branch_name
