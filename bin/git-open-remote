@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-open "https://$(git remote get-url origin | sed -E 's/^git@//g' | sed -E 's/\.git$//g' | tr ':' '/')"
+open "https://$(git remote get-url origin | sed -E 's/^git@//g' | sed -E 's/\.git$//g' | tr ':' '/')$1"
