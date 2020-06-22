@@ -15,4 +15,8 @@ fi
 
 link .zsh_plugins
 link .zshrc
-link bin
+
+mkdir -p "$HOME/bin"
+for f in bin/*; do
+	link "$f"
+done
