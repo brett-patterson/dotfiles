@@ -19,7 +19,7 @@ precmd_functions=($precmd_functions update_terminal_title)
 alias g="git"
 alias gs="g status"
 
-export PATH="$HOME/bin:$PATH"
+export PATH=".:$HOME/bin:$PATH"
 
 mkdir -p ~/.zshrc.d
 for f in $(ls $HOME/.zshrc.d/); do
