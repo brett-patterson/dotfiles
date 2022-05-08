@@ -21,6 +21,10 @@ alias gs="g status"
 
 export PATH=".:$HOME/bin:$PATH"
 
+export ATUIN_NOBIND="true"
+eval "$(atuin init zsh)"
+bindkey '^r' _atuin_search_widget
+
 mkdir -p ~/.zshrc.d
 for f in $(ls $HOME/.zshrc.d/); do
     . "$HOME/.zshrc.d/$f"

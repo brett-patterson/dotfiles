@@ -13,6 +13,8 @@ else
 	brew install getantibody/tap/antibody
 fi
 
+brew install atuin
+
 link .zsh_plugins
 link .zshrc
 
