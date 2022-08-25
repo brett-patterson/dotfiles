@@ -1,13 +1,13 @@
-source <(antibody init)
+eval "$(~/homebrew/bin/brew shellenv)"
 
-antibody bundle < ~/.zsh_plugins
+source $(brew --prefix)/Cellar/zplug/*/init.zsh
+source ~/.zsh_plugins
 
-autoload -Uz compinit
-if [[ -n ${HOME}/.zcompdump ]]; then
-    compinit;
-else
-    compinit -C;
+if ! zplug check; then
+    zplug install
 fi
+
+zplug load
 
 update_terminal_title() {
     title=$(basename $PWD)

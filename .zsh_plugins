@@ -1,4 +1,7 @@
-dracula/zsh
+zplug "dracula/zsh", as:theme
 
-docker/cli path:contrib/completion/zsh kind:fpath
-bazelbuild/bazel path:scripts/zsh_completion kind:fpath
+zplug "zsh-users/zsh-completions", defer:2
+zplug "lukechilds/zsh-better-npm-completion", defer:2
+zplug "chrisands/zsh-yarn-completions", defer:2
+
+zplug "plugins/git", from:oh-my-zsh

@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 branch_name=$(git branch --show-current)
-git checkout master
-git pull -p
+git latest
 git branch -d $branch_name
