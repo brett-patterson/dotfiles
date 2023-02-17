@@ -1,7 +1,1 @@
-zplug "dracula/zsh", as:theme
-
-zplug "zsh-users/zsh-completions", defer:2
-zplug "lukechilds/zsh-better-npm-completion", defer:2
-zplug "chrisands/zsh-yarn-completions", defer:2
-
 zplug "plugins/git", from:oh-my-zsh
