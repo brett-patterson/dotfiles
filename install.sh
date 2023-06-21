@@ -7,9 +7,17 @@ link() {
 	ln -i -s $base_dir/$1 $target_dir/$1
 }
 
-brew install zplug
-brew install asdf
+brew install \
+  zplug \
+  asdf \
+  jandedobbeleer/oh-my-posh/oh-my-posh \
+  atuin
 
 link .zsh_plugins
 link .zshrc
-link bin
+link .prompt.omp.json
+
+for p in $(ls bin); do
+  f=$(basename $p)
+  link bin/$f
+done

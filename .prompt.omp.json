@@ -1,0 +1,141 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "final_space": true,
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "executiontime",
+          "style": "diamond",
+          "foreground": "#AEA4BF",
+          "background": "#29315A",
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4 ",
+          "template": "{{ .FormattedMs }}",
+          "properties": {
+            "style": "austin",
+            "threshold": 150
+          }
+        },
+        {
+          "type": "path",
+          "style": "diamond",
+          "foreground": "#3EC669",
+          "background": "#29315A",
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "template": "\ue5ff {{ .Path }}",
+          "properties": {
+            "style": "mixed",
+            "mapped_locations": {
+              "/Users/brett.patterson": "~"
+            }
+          }
+        },
+        {
+          "type": "git",
+          "style": "diamond",
+          "foreground": "#43CCEA",
+          "background": "#29315A",
+          "leading_diamond": " \ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "template": "{{ .HEAD }}",
+          "properties": {
+            "branch_icon": ""
+          }
+        },
+        {
+          "type": "python",
+          "style": "diamond",
+          "foreground": "#E4F34A",
+          "background": "#29315A",
+          "leading_diamond": " \ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "template": "\ue235{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}",
+          "properties": {
+            "fetch_version": false
+          }
+        },
+        {
+          "type": "go",
+          "style": "diamond",
+          "foreground": "#7FD5EA",
+          "background": "#29315A",
+          "leading_diamond": " \ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "template": "\ue626{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "properties": {
+            "fetch_version": false
+          }
+        },
+        {
+          "type": "node",
+          "style": "diamond",
+          "foreground": "#42E66C",
+          "background": "#29315A",
+          "leading_diamond": " \ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "template": "\ue718{{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
+          "properties": {
+            "fetch_version": false
+          }
+        },
+        {
+          "type": "ruby",
+          "style": "diamond",
+          "foreground": "#E64747",
+          "background": "#29315A",
+          "leading_diamond": " \ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "template": "\ue791{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "properties": {
+            "fetch_version": false
+          }
+        },
+        {
+          "type": "java",
+          "style": "diamond",
+          "foreground": "#E64747",
+          "background": "#29315A",
+          "leading_diamond": " \ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "template": "\ue738{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "properties": {
+            "fetch_version": false
+          }
+        },
+        {
+          "type": "julia",
+          "style": "diamond",
+          "foreground": "#9B6BDF",
+          "background": "#29315A",
+          "leading_diamond": " \ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "template": "\ue624{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+          "properties": {
+            "fetch_version": false
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "text",
+          "style": "diamond",
+          "foreground": "#7FD5EA",
+          "background": "#29315A",
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "template": "❯"
+        }
+      ],
+      "newline": true
+    }
+  ]
+}
